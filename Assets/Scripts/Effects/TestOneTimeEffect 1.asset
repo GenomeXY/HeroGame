@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ca63650da2b56f4c84c9f18924465a3, type: 3}
+  m_Name: TestOneTimeEffect 1
+  m_EditorClassIdentifier: 
+  Name: ONE_BBB
+  Description: one_bbb
+  Sprite: {fileID: 21300000, guid: b0b8652cf4aa0034c983d84e52da64fb, type: 3}
+  Level: 0

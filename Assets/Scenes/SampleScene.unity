@@ -753,6 +753,65 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1245043118
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1245043120}
+  - component: {fileID: 1245043119}
+  m_Layer: 0
+  m_Name: EffectsManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1245043119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1245043118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78c749121b622b642bdbe94e6fd2cdbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _continuousEffectsApplied: []
+  _oneTimeEffectsApplied: []
+  _continuousEffects:
+  - {fileID: 11400000, guid: a4227af6f54ee054283b7a51b8780824, type: 2}
+  - {fileID: 11400000, guid: de04cb340e852f24fadd5b8d3729b8e4, type: 2}
+  - {fileID: 11400000, guid: 129f1350506bfdb489fad4a0bde6dbd9, type: 2}
+  - {fileID: 11400000, guid: 8b1861b877d4d974eb332d99853d0035, type: 2}
+  - {fileID: 11400000, guid: 844f6d29718fb24488e306598ec10203, type: 2}
+  - {fileID: 11400000, guid: 089359245efaeb7408bed01c60e8b75e, type: 2}
+  - {fileID: 11400000, guid: 6c46d56c592e3504bb5f5cec549ab301, type: 2}
+  _oneTimeEffects:
+  - {fileID: 11400000, guid: 61085f2482d43e94aa499e39ca03740a, type: 2}
+  - {fileID: 11400000, guid: f1bb295c642852846b22f060e4353163, type: 2}
+  - {fileID: 11400000, guid: a32fc41a09cad1842a591f1491d4cf50, type: 2}
+  - {fileID: 11400000, guid: f1a0b05142ee97a478f12f968cc7d9de, type: 2}
+--- !u!4 &1245043120
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1245043118}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1415793058
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1083,3 +1142,4 @@ SceneRoots:
   - {fileID: 271356923}
   - {fileID: 1930613443}
   - {fileID: 2015181559}
+  - {fileID: 1245043120}
