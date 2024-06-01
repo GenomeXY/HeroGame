@@ -8,5 +8,10 @@ public abstract class Effect : ScriptableObject
     [TextArea(1, 3)]
     public string Description;
     public Sprite Sprite;
-    public int Level = 0;
+    public int Level = -1;
+
+    public virtual void Activate()
+    {
+        Level++;
+    }
 }

@@ -94,4 +94,27 @@ public class EffectsManager : MonoBehaviour
         }
         return result;
     }
+
+    public void AddEffect(Effect effect)
+    {
+        // Перемещаем эффекты из списка не примененных в список примененных
+        if (effect is ContinuousEffect c_effect)
+        {
+            if (!_continuousEffectsApplied.Contains(c_effect))
+            {
+                _continuousEffectsApplied.Add(c_effect);
+                _continuousEffects.Remove(c_effect);
+            }
+        }
+        else if (effect is OneTimeEffect one_effect)
+        {
+            if (!_oneTimeEffectsApplied.Contains(one_effect))
+            {
+                _oneTimeEffectsApplied.Add(one_effect);
+                _oneTimeEffects.Remove(one_effect);
+            }
+        }
+        // активируем эффект
+        effect.Activate();
+    }
 }
