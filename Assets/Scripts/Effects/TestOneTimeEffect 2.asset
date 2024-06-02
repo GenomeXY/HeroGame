@@ -15,4 +15,4 @@ MonoBehaviour:
   Name: ONE_CCC
   Description: one_ccc
   Sprite: {fileID: 21300000, guid: 84ff4e85968877c4da90ea3ec8948e42, type: 3}
-  Level: 0
+  Level: -1

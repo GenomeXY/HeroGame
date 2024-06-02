@@ -15,4 +15,4 @@ MonoBehaviour:
   Name: ONE_DDD
   Description: one_ddd
   Sprite: {fileID: 21300000, guid: ca7d3f93077454e46b71fe13eb165a07, type: 3}
-  Level: 0
+  Level: -1

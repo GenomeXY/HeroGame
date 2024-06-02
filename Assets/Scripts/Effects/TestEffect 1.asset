@@ -15,4 +15,4 @@ MonoBehaviour:
   Name: BBB
   Description: bbb
   Sprite: {fileID: 21300000, guid: ac260bc2a4d6c79458cfe9faacd10c2c, type: 3}
-  Level: 0
+  Level: -1

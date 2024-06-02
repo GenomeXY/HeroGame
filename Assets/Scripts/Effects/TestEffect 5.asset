@@ -15,4 +15,4 @@ MonoBehaviour:
   Name: FFF
   Description: fff
   Sprite: {fileID: 21300000, guid: b578bda28c001fa4fbfdf1a324b676bd, type: 3}
-  Level: 0
+  Level: -1
