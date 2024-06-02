@@ -26,8 +26,12 @@ public class Loot : MonoBehaviour
             transform.position = position;
             yield return null;
         }
+                
+        Take(collector);
+    }
 
+    public virtual void Take(Collector collector)
+    {
         Destroy(gameObject);
-
     }
 }
