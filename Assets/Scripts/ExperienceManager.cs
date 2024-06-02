@@ -17,6 +17,7 @@ public class ExperienceManager : MonoBehaviour
     [SerializeField] private EffectsManager _effectsManager;
 
     [SerializeField] private AnimationCurve _experienceCurve;
+    [SerializeField] private ParticleSystem _particleSystem;
 
     private void Awake()
     {
@@ -35,8 +36,9 @@ public class ExperienceManager : MonoBehaviour
     public void UpLevel()
     {
         _level++;
-        _effectsManager.ShowCards();
         _levelText.text = _level.ToString();
+
+        StartCoroutine(LevelUpEffect());
         _experience = 0;
         _nextLevelExperience = _experienceCurve.Evaluate(_level);
     }
@@ -45,5 +47,13 @@ public class ExperienceManager : MonoBehaviour
     private void DisplayExperence()
     {
         _experienceScale.fillAmount = _experience/_nextLevelExperience;
+    }
+
+    private IEnumerator LevelUpEffect()
+    {
+        _particleSystem.Play();
+        yield return new WaitForSeconds(1.2f);
+        _effectsManager.ShowCards();
+        Time.timeScale = 0f;
     }
 }

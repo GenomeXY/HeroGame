@@ -50,5 +50,6 @@ public class Card : MonoBehaviour
     {
         _effectsManager.AddEffect(_effect);
         _cardManager.Hide();
+        Time.timeScale = 1;
     }
 }
