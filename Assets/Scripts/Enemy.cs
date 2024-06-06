@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] private Transform _playerTransform;
+    private Transform _playerTransform;
     [SerializeField] private float _speed;
     [SerializeField] private Rigidbody _rigidbody;
     [SerializeField] private float _rotationLerpRate = 3f;
@@ -14,6 +14,11 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float _dps;
 
     private PlayerHealth _playerHealth;
+
+    public void Init(Transform playerTransform)
+    {
+        _playerTransform = playerTransform;
+    }
 
     private void Update()
     {
@@ -39,7 +44,14 @@ public class Enemy : MonoBehaviour
             transform.rotation = Quaternion.Lerp(transform.rotation, toPlayerRotation, Time.deltaTime * _rotationLerpRate);
 
             _rigidbody.velocity = transform.forward * _speed;
-        }
+
+            // отзеркаливание позиции (перемещение) врагов, оказавшихся на определенном расстоении от игрока
+
+            if (toPlayer.magnitude > 12f) // если расстояние до игрока больше, то меняем позицию врага, прибавляем 1.9 расстояния до игрока
+            {
+                transform.position += toPlayer * 1.9f;
+            }
+        }        
     }
 
     private void OnTriggerEnter(Collider other)
