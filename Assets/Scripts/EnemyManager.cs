@@ -10,11 +10,6 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] private ChapterSettings _chapterSettings;
     private List<Enemy> _enemyList = new List<Enemy>(); // для размещения новых созданных врагов
 
-    private void Start()
-    {
-        StartNewWave(2);   
-    }
-
     public void StartNewWave(int wave)
     {
         StopAllCoroutines();

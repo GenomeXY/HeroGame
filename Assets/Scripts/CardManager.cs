@@ -8,6 +8,8 @@ public class CardManager : MonoBehaviour
     [SerializeField] private Card[] _effectCards;
     [SerializeField] private EffectsManager _effectsManager;
 
+    [SerializeField] private GameStateManager _gameStateManager;
+
     private void Awake()
     {
         for (int i = 0; i < _effectCards.Length; i++)
@@ -22,10 +24,13 @@ public class CardManager : MonoBehaviour
         {
             _effectCards[i].Show(effects[i]);
         }
+
+        _gameStateManager.SetCardsState();
     }
 
     public void Hide()
     {
         _cardManagerParent.SetActive(false);
+        _gameStateManager.SetAction();
     }
 }

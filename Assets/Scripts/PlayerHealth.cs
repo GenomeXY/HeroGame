@@ -11,6 +11,8 @@ public class PlayerHealth : MonoBehaviour
     public event Action<float, float> OnHealthChange;
     public event Action OnDie;
 
+    [SerializeField] private GameStateManager _gameStateManager;
+
     private void Start()
     {
         SetHealth(_maxHealth);
@@ -36,5 +38,6 @@ public class PlayerHealth : MonoBehaviour
     {
         OnDie?.Invoke();
         Debug.Log("Die");
+        _gameStateManager.SetLose();
     }
 }

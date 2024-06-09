@@ -9,7 +9,7 @@ public class ExperienceManager : MonoBehaviour
     [SerializeField] private float _experience = 0;
     [SerializeField] private float _nextLevelExperience;
 
-    private int _level;
+    private int _level = -1;
 
     [SerializeField] private TextMeshProUGUI _levelText;
     [SerializeField] private Image _experienceScale;
@@ -54,6 +54,6 @@ public class ExperienceManager : MonoBehaviour
         _particleSystem.Play();
         yield return new WaitForSeconds(1.2f);
         _effectsManager.ShowCards();
-        Time.timeScale = 0f;
+        //Time.timeScale = 0f;
     }
 }
